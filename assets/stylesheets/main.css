@@ -1,0 +1,29 @@
+div {
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    display: grid;
+}
+
+.nav {
+    background-color: #0D47A1;
+}
+
+.header {
+    background-color: #512DA8;
+}
+
+.intro {
+    background-color: #616161;
+}
+
+.social {
+    background-color: #512DA8; 
+}
+
+.footer {
+    background-color: #90CAF9;
+}
+
