@@ -173,9 +173,52 @@ h5 {
     padding-top: 30px;
     padding-bottom: 20px;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.2;
 }
 
+/* PERSONAL */
+
+.personal {
+    padding-bottom: 20px;
+    display: subgrid;
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-row-gap: 10px;
+    grid-area: 
+    "personal-sec"
+    "software"
+    "hobbies"
+}
+
+.personal h5 {
+    color: #2196F3;
+    padding-top: 20px;
+    font-weight: 400;
+    letter-spacing: 0.05px;
+    font-size: 16px;
+}
+
+/* PERSONAL-SEC */
+
+table {
+    text-align: left;
+}
+
+th {
+    font-weight: 400;
+    font-size: 14px;
+    padding-right: 3px;
+}
+
+td {
+    font-size: 14px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+tr {
+    border-bottom: 2px #eee solid;
+    border-collapse: collapse;
+}
 
 
