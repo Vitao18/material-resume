@@ -1,8 +1,66 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FONTS */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
 /* GRID PROPERTIES */
 
 .container {
-    width: 960px;
-    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
     display: grid;
     grid-template-rows: 5% 20% 10% 50% 10% 5%;
     grid-template-columns: 30% 70%;
@@ -12,7 +70,12 @@
     "intro intro"
     "personal work"
     "social social"
-    "footer footer" 
+    "footer footer"
+}
+
+.nav, .header, .intro, .resume, .social, .footer {
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .nav {
@@ -21,7 +84,7 @@
 }
 
 .header {
-    background-color: #512DA8;
+    background-color: #90CAF9;
     grid-area: header;
 }
 
@@ -50,6 +113,12 @@
 
 /* NAVBAR */
 
+.nav { 
+    padding-left: 70px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
 ul {
     display: flex;
     justify-content: left;
@@ -61,10 +130,12 @@ ul li {
 }
 
 li a {
-    font-size: 90%;
+    text-transform: uppercase;
+    font-size: 14px;
     color: white;
     text-decoration: none;
     padding: 10px 0 12px 0;
+    letter-spacing: 0.1px;
 }
 
 a:visited {
@@ -72,5 +143,39 @@ a:visited {
 }
 
 li a:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
+    font-weight: 400;
 }
+ 
+/* HEADER */
+
+.header {
+    color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.header h1 {
+    letter-spacing: 1px;
+    padding-top: 40px;
+    font-size: 40px;
+}
+
+h5 {
+    padding-top: 2px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* INTRO */
+
+.intro {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+
+
