@@ -55,6 +55,31 @@ body {
     font-weight: 300;
 }
 
+/* TABLES */
+
+
+table {
+    text-align: left;
+}
+
+th {
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+td {
+    letter-spacing: 0.05px;
+    font-size: 14px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-weight: 300;
+}
+
+tr {
+    border-bottom: 2px #eee solid;
+    border-collapse: collapse;
+}
 
 /* GRID PROPERTIES */
 
@@ -73,9 +98,25 @@ body {
     "footer footer"
 }
 
-.nav, .header, .intro, .resume, .social, .footer {
+.nav, .header, .intro, .social, .footer {
     padding-left: 70px;
     padding-right: 70px;
+}
+
+.personal {
+    padding-left: 70px;
+}
+
+.work {
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 40px;
+    padding-right: 70px;
+}
+
+.experience {
+    display: inline-grid;
+    grid-auto-rows: auto;
 }
 
 .nav {
@@ -95,6 +136,7 @@ body {
 
 .work {
     grid-area: work;
+    background-color: #eee;
 }
 
 .personal {
@@ -102,8 +144,11 @@ body {
 }
 
 .social {
-    background-color: #512DA8;
-    grid-area: social; 
+    background-color: #0aa6e1;
+    grid-area: social;
+    display: inline-grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .footer {
@@ -129,13 +174,18 @@ ul li {
     margin: 0 5px;
 }
 
-li a {
+a {
     text-transform: uppercase;
     font-size: 14px;
     color: white;
     text-decoration: none;
     padding: 10px 0 12px 0;
     letter-spacing: 0.1px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
 }
 
 a:visited {
@@ -181,7 +231,6 @@ h5 {
 
 .personal {
     padding-bottom: 20px;
-    display: subgrid;
     grid-template-rows: 2fr 2fr 1fr;
     grid-row-gap: 10px;
     grid-area: 
@@ -190,7 +239,7 @@ h5 {
     "hobbies"
 }
 
-.personal h5 {
+.resume h5 {
     color: #2196F3;
     padding-top: 20px;
     font-weight: 400;
@@ -198,27 +247,57 @@ h5 {
     font-size: 16px;
 }
 
-/* PERSONAL-SEC */
+/* PROGRESS BARS */
 
-table {
-    text-align: left;
+progress[value]::-webkit-progress-bar {
+    background-color: #1976D2;
 }
 
-th {
-    font-weight: 400;
-    font-size: 14px;
-    padding-right: 3px;
+/* ICONS */
+
+.resume .fa-stack-1x {
+    color:  gray;
 }
 
-td {
-    font-size: 14px;
-    padding-bottom: 8px;
-    padding-top: 8px;
+.fa-stack {
+    color:#90caf9;
+    padding: 5px;
 }
 
-tr {
-    border-bottom: 2px #eee solid;
-    border-collapse: collapse;
+.fa-2x {
+    color: #EEE;
 }
 
+/* WORK */
+
+.experience div {
+    padding-left: 30px;
+    display: inline-block;
+}
+
+.job div:nth-child(3) {
+    padding-top: 10px;
+    padding-left: 60px;
+    padding-bottom: 10px;
+}
+
+.education div:nth-child(3) {
+    padding-top: 10px;
+    padding-left: 60px;
+    padding-bottom: 10px;
+}
+
+.education div {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+hr {
+    color: #eee;
+}
+
+.social {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
 
